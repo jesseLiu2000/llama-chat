@@ -1,0 +1,527 @@
+<DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="description" content="None">
+          
+          
+          <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+          <title>Fiber</title>
+          <link href="{{ url_for('static', filename='styles/bootstrap.min.css') }}" rel="stylesheet">
+          <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+          <link href="{{ url_for('static', filename='styles/font-awesome.min.css') }}" rel="stylesheet">
+          <link href="{{ url_for('static', filename='styles/base.css') }}" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+          <link rel="stylesheet" href="{{ url_for('static', filename='styles/play.css') }}">
+  
+          <script src="{{ url_for('static', filename='js/jquery-1.10.2.min.js') }}" defer></script>
+          <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" defer></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+          <script>hljs.initHighlightingOnLoad();</script>
+          <style>
+            img {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          </style>
+      </head>
+  
+
+    <body class="homepage">
+        <!-- <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="https://nlp.wustl.edu/">Fiber</a> -->
+
+                <!-- Expanded navigation -->
+                <!-- <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"> -->
+<!--                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">-->
+<!--                                <i class="fa fa-search"></i> Search-->
+<!--                            </a>-->
+                        <!-- </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container">
+            <div class="row">
+                    <!-- <div class="col-md-2"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary"> -->
+    <!-- <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div> -->
+
+    
+    <!-- <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#welcome" class="nav-link"></a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#method" class="nav-link">Method</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#result" class="nav-link">Results</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            </li> -->
+            <!-- <li class="nav-item" data-level="2"><a href="#case-study" class="nav-link">Case Study</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li> -->
+            <!-- <li class="nav-item" data-level="2"><a href="#demo" class="nav-link">Interactive Demo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#release" class="nav-link">Release</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#discussion" class="nav-link">Further Discussion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#future-work" class="nav-link">Future Direction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#limitations" class="nav-link">Limitations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#license" class="nav-link">License</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#team" class="nav-link">Team</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#acknowledgments" class="nav-link">Acknowledgments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#citations" class="nav-link">Citations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div> -->
+<!-- </div> -->
+</div>
+                    <div class="col-md-9" role="main">
+
+
+<h2 id="welcome", style="position: center;">Fiber: A Few Instructions Make Better Large Language Models</h2>
+<p><br>
+Authors: Nick Crispino<sup>*</sup>, <a href="https://jesseliu2000.github.io/">Zijie Liu</a><sup>*</sup>, <a href="https://kylemontgomery1.github.io/">Kyle Montgomery</a><sup>*</sup>, <a href="http://www.linkedin.com/in/yidan-tang">Yidan Tang</a><sup>*</sup>, <a href="https://zengfankun.com/">Fankun Zeng</a><sup>*</sup>
+<br><br>
+Updated: 4-12-2023<br><br>
+
+<img src="{{ url_for('static', filename='logo.png')}}" alt="Fiber" height="175">
+<p style="text-align:center; font-size:.75em">Made in Midjourney</p>
+
+We introduce Fiber, an effective instruction engineering technique for large language models. Fiber shows that careful use of the data can improve the performance of pretrained language models, such as LLaMA, to be competitive with ChatGPT on a wide set of NLP benchmarks for zero training cost.
+<br></p>
+<p><a href="/demo">Demo</a> &nbsp &nbsp <a href="https://github.com/wang-research-lab/fiber">Github</a></p>
+<h3 id="overview">Overview</h3>
+<p>Recently released large language models (LLMs), such as <a href="https://openai.com/blog/chatgpt">ChatGPT</a>, <a href="https://openai.com/research/gpt-4">GPT-4</a>, and <a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai/">LLaMA</a>, have revolutionized the ways in which machines understand and generate human language, allowing for more accurate completion of sophisticated natural language processing (NLP) tasks such as machine translation, text summarization, and sentiment analysis. In fact, LLMs in zero/few-shot settings are often able to beat existing models with benchmark-specific training.<br><br>
+The general consensus in AI research is that an LLM’s performance follows scaling laws. Though recent advances have made it possible to train LLMs with hundreds of billions of parameters, this approach still requires significant computational resources, a long training time, and immense amounts of data. As such, API access can be prohibitively expensive if consistently used.<br><br>
+In addition to the monetary concerns, the centralized nature of AI research obscures details of model architecture and training data. As such, recent progress has been met with backlash, with prominent industry tech leaders and researchers signing an open letter encouraging AI research labs to halt further development and the Center for AI and Digital Polity (CAIDP) filing a complaint with the Federal Trade Commission (FTC) regarding OpenAI’s release of GPT-4.
+</p>
+<h3 id="method">Method</h3>
+<p>We introduce Fiber, an instruction engineering strategy that enables standard LLMs to mimic instruction-following LLMs across a set of challenging NLP tasks without any additional training.<br><br>
+<img src="{{ url_for('static', filename='img/prompting.png') }}" alt="Prompting Diagram" width="75%">
+Fiber is an instruction-following LLM developed by combining LLaMA (65B) with instruction engineering. Our work aligns with recent work (<a href="https://crfm.stanford.edu/2023/03/13/alpaca.html">Alpaca</a>, <a href="https://bair.berkeley.edu/blog/2023/04/03/koala/">Koala</a>, <a href="https://vicuna.lmsys.org/">Vicuna</a>, <a href="https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html">Dolly</a>, <a href="https://arxiv.org/abs/2212.10560">Self-Instruct</a>), but our approach requires no additional costly training. <br>
+<img src="{{ url_for('static', filename='img/cost.png') }}" alt="Cost Diagram" width="60%"><br>
+Furthermore, LLaMA, on which Fiber is based, is open-source and decentralized. Fully published details about the model's architecture and the training process are available, enabling users to have full control over their data when running locally. Often, this is cheaper compared to sending it off to a third-party through an API.
+</p>
+<h3 id="result">Results</h3>
+<p>The following table shows our results across a handful of standard benchmarks. Unless otherwise indicated, all results use at most five-shots.</p>
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr>
+<th>Scenario/Model</th>
+<th>Average Score</th>
+<!-- <th>MMLU - EM</th> -->
+<!-- <th>BoolQ - EM</th> -->
+<!-- <th>NarrativeQA - F1</th> -->
+<th>NaturalQuestions (closed-book) - F1</th>
+<th>NaturalQuestions (open-book) - F1</th>
+<th>QuAC - F1</th>
+<th>HellaSwag - EM</th>
+<!-- <th>OpenbookQA - EM</th> -->
+<!-- <th>TruthfulQA - EM</th> -->
+<!-- <th>MS MARCO (regular) - RR@10</th>
+<th>MS MARCO (TREC) - NDCG@10</th> -->
+<!-- <th>CNN/DailyMail - ROUGE-2</th> -->
+<!-- <th>XSUM - ROUGE-2</th> -->
+<th>IMDB - EM</th>
+<th>CivilComments - EM</th>
+<!-- <th>RAFT - EM</th> -->
+<!-- <th>DROP - F1</th>
+<th>ARC-Challenge - EM</th>
+<th>ARC-Easy - EM</th>
+<th>Winogrande - EM</th> -->
+<th>Bar (MBE) - EM</th>
+<!-- <th>LSAT - Acc</th>
+<th>GRE Verbal - Acc</th>
+<th>GRE Quant - Acc</th> -->
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Fiber</strong>
+  </td>
+  <td>0.612</td>
+  <!-- <td>0.529</td> -->
+  <!-- <td>0.870</td> -->
+  <!-- <td><strong>0.765</strong></td> -->
+  <td><strong>0.427</strong></td>
+  <td><strong>0.685</strong></td>
+  <td>0.398</td>
+  <td>0.691</td>
+  <!-- <td>0.762</td>
+  <td>0.561</td> -->
+  <!-- <td>-</td>
+  <td>-</td> -->
+  <!-- <td>0.169</td> -->
+  <!-- <td><strong>0.183</strong></td> -->
+  <td><strong>0.942</strong></td>
+  <td>0.644</td>
+  <!-- <td>0.702</td> -->
+  <!-- <td>0.522</td>
+  <td>0.764</td>
+  <td>0.874</td>
+  <td>0.642</td> -->
+  <td>0.495</td>
+  <!-- <td>-</td>
+  <td>-</td>
+  <td>-</td> -->
+</tr>
+<tr>
+  <td>ChatGPT</td>
+  <td>0.637</td>
+  <!-- <td><strong>0.595</strong></td> -->
+  <!-- <td>0.811</td> -->
+  <!-- <td>0.665</td> -->
+  <td>0.389</td>
+  <td>0.628</td>
+  <td><strong>0.512</strong></td>
+  <td><strong>0.841</strong></td>
+  <!-- <td><strong>0.832</strong></td>
+  <td><strong>0.627</strong></td> -->
+  <!-- <td>0.266</td>
+  <td>0.512</td> -->
+  <!-- <td><strong>0.171</strong></td> -->
+  <!-- <td>0.143</td> -->
+  <td>0.857</td>
+  <td><strong>0.670</strong></td>
+  <!-- <td>0.757</td> -->
+  <!-- <td><strong>0.546</strong></td>
+  <td><strong>0.846</strong></td>
+  <td><strong>0.921</strong></td>
+  <td><strong>0.712</strong></td> -->
+  <td><strong>0.560</strong></td>
+  <!-- <td>0.592<sup>3</sup></td>
+<td>0.54<sup>3</sup></td>
+<td>0.36<sup>3</sup></td>   -->
+</tr>
+</tbody>
+</table>
+    </div>
+<p style="font-size:.75em">For all results, the higher the better.</p>
+
+<br><p>We put Fiber through a comprehensive evaluation on 6 core scenarios outlined in Holistic Evaluation of Language Models (<a href="https://crfm.stanford.edu/helm/latest/">HELM</a>) and the multiple-choice section of the Uniform Bar Examination. For the sake of comparison, we put ChatGPT through the same rigorous evaluation. Our initial results suggest that Fiber is competitive with ChatGPT, with Fiber scoring just 0.025 below ChatGPT on average.<br><br>
+Our interactive demo below is an implementation of Fiber in chat format. For technical reasons, we base the interactive demo on the 13B parameter LLaMA model, not the 65B parameters LLaMA. Following the evaluation methdology of Vicuna, we leverage GPT-4 to score the outputs of Fiber (13B) relative to ChatGPT. Though Fiber (13B) underpreforms ChatGPT, it's preformance matches that of Alpaca (13B), which was fine-tuned on 52K instruction-following data instances. Furthermore, Fiber (13B) considerably outpreforms LLaMA (13B), on which Fiber is based.</p>
+<img src="{{ url_for('static', filename='chatbot.png')}}" alt="Fiber (13B) Chat Performance" width="60%"><br>
+
+<!-- </p>
+
+<h3 id="case-study">Case Study</h3>
+
+<p>TODO
+</p> -->
+<h3 id="playground">Playground</h3>
+<div class="container mt-5">
+  <!-- Selection -->
+  <div class="form-row">
+      <div class="form-group col-md-2">
+          <label for="category-select">Category</label>
+          <select class="form-control" id="category-select"></select>
+      </div>
+      <div class="form-group col-md-8">
+          <label for="question-select">Question</label>
+          <select class="form-control" id="question-select"></select>
+      </div>
+      <div class="form-group col-md-2">
+          <div class="col-md-2"><label>&nbsp;</label></div>
+          <div class="btn-group" role="group" aria-label="Left and Right Controller">
+              <button type="button" class="form-control btn btn-primary" id="prev-question"><i class="material-icons">keyboard_arrow_left</i></button>
+              <button type="button" class="form-control btn btn-primary" id="next-question"><i class="material-icons">keyboard_arrow_right</i></button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Question Card -->
+  <div class="card mb-4">
+      <div class="card-body" id="selected-question"></div>
+  </div>
+
+  <!-- Answer Cards -->
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card mb-4 expandable-card">
+              <div class="card-header" style="padding-bottom: 0.2rem" id="other-model-header-bg">
+                  <div class="row">
+                      <div class="col-md-5" style="align-items: center; display: flex;">
+                          <label id="other-model-header">Assistant #1</label>
+                      </div>
+                      <div class="col-md-7">
+                          <select class="form-control" id="model-select" style="height: fit-content; margin-top: -0.3rem;"></select>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-body">
+                  <div class="card-text-container">
+                      <div class="card-text" id="other-model-answer"></div>
+                  </div>
+                  <div class="btn btn-primary expand-btn" style="display:flex;"></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="card mb-4 expandable-card">
+              <div class="card-header" id="our-model-header">
+                  Assistant #2 (Vicuna, our model)
+              </div>
+              <div class="card-body">
+                  <div class="card-text-container">
+                      <div class="card-text" id="our-model-answer"></div>
+                  </div>
+                  <div class="btn btn-primary expand-btn" style="display:flex;"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Evaluation -->
+  <div class="card expandable-card">
+      <div class="card-header" style="background-color: #c9c9f2;" id="evaluation-header">GPT-4 Evaluation</div>
+      <div class="card-body">
+          <div class="card-text-container">
+              <div class="card-text" id="evaluation-result"></div>
+          </div>
+          <div class="btn btn-primary expand-btn" style="display:flex;"></div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-light py-2">
+  <div class="text-center">
+      <small class="text-muted">This website is co-authored with <a href="https://openai.com" target="_blank">GPT-4</a>.</small>
+  </div>
+</div>
+
+<h3 id="demo">Interactive Demo</h3>
+
+<p>
+Our <a href="/demo">interactive demo</a> allows you to chat with Fiber.<br>
+</p>
+
+<!-- Display the demo video -->
+<!-- <div>
+  <a style="display: flex; justify-content: center;">
+    <video autoplay muted loop src="video.mp4" type="video/mp4" style="width: 80%;" id="demo"></video>
+  </a>
+</div> -->
+
+<h3 id="release">Release</h3>
+<p>
+So far, we have released:
+<ul>
+  <li><a href="https://nlp.wustl.edu/">This blog</a></li>
+  <li><a href="/demo">An interactive demo</a></li>
+</ul>
+In the coming weeks, we aim to publish a full report detailing the instruction engineering technique behind Fiber, as well as our evaluation methodology. We also plan to open-source all of our code, in hopes that more academic research can be done regarding data-centric strategies to increase the reliability of AI systems.<br><br>
+At the same time, we recognize the heightened risk surrounding this release, as any release that increases the performance of AI systems carries some inherent danger, especially given that our approach requires no additional training to implement. However, we believe that the benefit of our research to the academic community outweighs the
+potential costs.<br><br>
+Furthermore, we understand the potential drawbacks of releasing an interactive demo, namely concerns regarding producing disinformation and harmful content. We are exploring further methods to mitigate these risks.
+</p>
+
+<h3 id="discussion">Further Discussion</h3>
+<ul>
+  <li>
+Data-Centric AI: We hope that our work is impactful in the ongoing debate between model-centric AI and data-centric AI. Though scaling to larger models certainly enables more sophisticated NLP tasks to be accomplished, our work suggests that it’s equally effective to modify existing weaker AI models using innovative instruction engineering techniques. Other recent publications (Alpaca, Koala, Vicuna, Dolly, Self-Instruct) suggest that it’s also effective to train small models on high-quality instruction-following data. Both approaches avoid the risk and cost of training new, innately more powerful language models.
+  </li>
+  <li>
+Decentralization: Given concerns about centralized LLMs regarding data privacy, it's important for open-source alternatives to exist that achieve comparable performance. Additionally, open-source alternatives offer details about model architecture and training data.
+  </li>
+</ul>
+
+<h3 id="future-work">Future Direction</h3>
+<ul>
+<li>Reproducibility: We plan to evaluate Fiber on more benchmark datasets beyond those listed above. We'll start with the remaining HELM scenarios, then evaluate on other exams, and finally, on the remaining tasks ChatGPT was evaluated on <a href="https://arxiv.org/pdf/2302.06476.pdf">here</a>.</li>
+<li>Safety: We must explore methods to mitigate the risks associated with using LLMs in conjunction with Fiber, namely
+misinformation, bias, and harmful content. </li>
+<li>Evaluation: We will measure our performance on benchmark datasets using a selection of additional metrics targeting robustness, fairness, bias, and misinformation, rather than using just accuracy.
+</li>
+<li>Understanding: In addition to formalizing our method, additional work related to understanding the mechanisms behind why Fiber is successful is needed. Specifically, we want to know if Fiber applies to other LLMs and if we can make our instruction engineering more efficient.</li>
+</ul>
+
+
+<h3 id="limitations">Limitations</h3>
+
+<p>
+Although recent advances for LLMs have resulted in the completion of more sophisticated NLP tasks, the issue of alignment with societal values remains open. LLMs are still prone to produce harmful content, biased responses, and misinformation. Our initial results suggest that it’s possible to reduce these risks not by training larger, complex LLMs, but rather by leveraging instruction engineering. However, more research into this subject is needed.<br><br>
+Additionally, because LLaMA's context window is half that of ChatGPT, we are regularly forced to cut out shots on some datasets. We would expect that a larger context length could improve our results and we hope that more open LLMs with large context lengths are released soon.
+</p>
+
+<h3 id="license">License</h3>
+
+<p>The online demo serves as a research preview intended for non-commercial use only. Its usage is subject to the model <a href="https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md">License</a> of LLaMA. Please contact us if you find any potential violations.
+</p>  
+
+<h3 id="team">Team</h3>
+Fiber was developed as a joint effort between WashU,  Berkeley, and Stanford.<br><br>
+Students (alphabetical order): Nick Crispino, Zijie Liu, Kyle Montgomery, Yidan Tang, Fankun Zeng<br><br>
+Advisors (alphabetical order):<br><br>
+
+<h3 id="acknowledgments">Acknowledgments</h3>
+<p>Our work on this project greatly depends on previous work surrounding large language models. Specifically, we would like to thank our collaborators at Berkeley's BAIR, as well as our collaborators at Stanford for sharing their work on HELM; our evaluation methodology heavily depends on and closely follows their work. A special thanks goes out to our colleague Kripa George for help with logo and diagram design, as well as Midjourney. Furthermore, this project would not have been possible had Meta not provided us with research access to the weights of LLaMA. Finally, we extend our gratitude to OpenAI for API access to ChatGPT and GPT-4; it has been integral in the successful completion of this work.
+</p>
+
+<h3 id="citations">Citation</h3>
+<pre><code>@misc{fiber,
+author = {Nick Crispino, Zijie Liu, Kyle Montgomery, Yidan Tang, Fankun Zeng},
+title = {Fiber: A Few Instructions Make Better Large Language Models},
+howpublished = {Blog post},
+month = {April},
+year = {2023},
+url = {https://nlp.wustl.edu/fiber/},
+urldate = {2023-04-12}
+}
+</code></pre>
+
+
+                    </div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p></p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="{{ url_for('static', filename='js/base.js') }}" defer></script>
+        <script src="{{ url_for('static', filename='search/main.js') }}" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/lib/marked.umd.min.js"></script>
+    <!-- Bootstrap and Popper.js JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+    <script>
+      // Fetch the JSON file
+      fetch('data.json')
+        .then(response => response.json())
+        .then(json_data => {
+            // Populate the models and questions.
+            populateModels(json_data.models);
+            populateQuestions(json_data.questions);
+            displayQuestion(currentQuestionIndex);
+        }).catch(error => console.error(error));
+    </script>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-03-29 05:26:59.687095+00:00
+-->
