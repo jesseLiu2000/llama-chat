@@ -1,38 +1,51 @@
 from flask import Flask, render_template, request
 import requests
+from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-from transformers import AutoTokenizer, LlamaForCausalLM
+
+device = "cuda"
+
+model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", cache_dir="/scratch/cache", device_map="balanced_low_0")
+model.save_pretrained("/scratch/zijie/gpt-j/")
+tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
+
 
 app = Flask(__name__)
 app.static_folder = 'static'
 
-model = LlamaForCausalLM.from_pretrained("/scratch/zijie/github/weights/llama-13b", device_map="auto", load_in_8bit=True)
-tokenizer = AutoTokenizer.from_pretrained("/scratch/zijie/github/weights/llama-13b", use_fast=False)
+API_URL = "https://api-inference.huggingface.co/models/EleutherAI/gpt-j-6B"
+headers = {"Authorization": "Bearer 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"}
+
+
+def query(payload):
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()
 
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
-@app.route('/demo')
-def register():
-   # Ensure the user reached path via GET
-   if request.method == "GET":
-      return render_template("demo.html")
-
-   else:
-      pass # Pass is a Python way to say 'do nothing'
-
 @app.route("/get")
 def get_bot_response():
-    prompt = request.args.get('msg')
+    userText = request.args.get('msg')
 
-    inputs = tokenizer(prompt, return_tensors="pt")
-    # Generate
-    generate_ids = model.generate( torch.as_tensor(inputs.input_ids).cuda(), do_sample=True, temperature=0.7, max_length=30)
-    result = tokenizer.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
-    return result
+    prompt = ("Question:", +
+        userText +
+              "Answer: "
+    )
+
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids
+
+    gen_tokens = model.generate(
+        input_ids,
+        do_sample=True,
+        temperature=0.9,
+        max_length=100,
+    )
+    gen_text = tokenizer.batch_decode(gen_tokens)[0]
+
+    return gen_text
 
 if __name__ == "__main__":
-    print("======== Flask Running =========")
-    app.run(host="10.24.77.19", port="8080", debug=True)
+    app.run(host="0.0.0.0", debug=True)

@@ -1,0 +1,161 @@
+nohup: ignoring input
+====>
+ * Serving Flask app 'example'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.24.77.19:8080
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 857-429-517
+10.24.76.12 - - [12/Apr/2023 13:48:54] "GET / HTTP/1.1" 200 -
+10.24.76.12 - - [12/Apr/2023 13:48:54] "[36mGET /static/styles/style.css HTTP/1.1[0m" 304 -
+10.24.76.12 - - [12/Apr/2023 13:48:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.24.38.3 - - [12/Apr/2023 14:06:59] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:06:59] "[36mGET /static/styles/style.css HTTP/1.1[0m" 304 -
+10.24.38.3 - - [12/Apr/2023 14:25:46] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:25:46] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:25:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/scratch/zijie/github/fiber/example.py', reloading
+====>
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 857-429-517
+10.24.38.3 - - [12/Apr/2023 14:36:13] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:36:31] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:36:31] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:38:06] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:38:06] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:38:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.24.38.3 - - [12/Apr/2023 14:38:24] "[33mGET /scratch/zijie/github/fiber/static/icon.jpg HTTP/1.1[0m" 404 -
+10.24.38.3 - - [12/Apr/2023 14:38:24] "[35m[1mGET /get?msg=who%20are%20you%3F HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/scratch/zijie/github/fiber/example.py", line 117, in get_bot_response
+    generator = MAIN.init()
+  File "/scratch/zijie/github/fiber/example.py", line 91, in init
+    local_rank, world_size = setup_model_parallel()
+  File "/scratch/zijie/github/fiber/example.py", line 30, in setup_model_parallel
+    torch.distributed.init_process_group("nccl")
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 895, in init_process_group
+    default_pg = _new_process_group_helper(
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 1009, in _new_process_group_helper
+    backend_class = ProcessGroupNCCL(backend_prefix_store, group_rank, group_size, pg_options)
+RuntimeError: ProcessGroupNCCL is only supported with GPUs, no GPUs found!
+10.24.38.3 - - [12/Apr/2023 14:39:13] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:39:13] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:40:07] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:40:08] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:40:12] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:40:13] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:40:44] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:40:44] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:41:40] "[35m[1mGET /get?msg=who%20are%20you%3F HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/scratch/zijie/github/fiber/example.py", line 117, in get_bot_response
+    generator = MAIN.init()
+  File "/scratch/zijie/github/fiber/example.py", line 91, in init
+    local_rank, world_size = setup_model_parallel()
+  File "/scratch/zijie/github/fiber/example.py", line 30, in setup_model_parallel
+    torch.distributed.init_process_group("nccl")
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 895, in init_process_group
+    default_pg = _new_process_group_helper(
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 1009, in _new_process_group_helper
+    backend_class = ProcessGroupNCCL(backend_prefix_store, group_rank, group_size, pg_options)
+RuntimeError: ProcessGroupNCCL is only supported with GPUs, no GPUs found!
+10.24.38.3 - - [12/Apr/2023 14:41:40] "[33mGET /scratch/zijie/github/fiber/static/icon.jpg HTTP/1.1[0m" 404 -
+10.24.76.12 - - [12/Apr/2023 14:42:29] "GET / HTTP/1.1" 200 -
+10.24.76.12 - - [12/Apr/2023 14:42:29] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.76.12 - - [12/Apr/2023 14:42:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.24.76.12 - - [12/Apr/2023 14:42:33] "[33mGET /scratch/zijie/github/fiber/static/icon.jpg HTTP/1.1[0m" 404 -
+10.24.76.12 - - [12/Apr/2023 14:42:33] "[35m[1mGET /get?msg=answer%20the%202+3 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2551, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2531, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/research/l.zijie/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/scratch/zijie/github/fiber/example.py", line 117, in get_bot_response
+    generator = MAIN.init()
+  File "/scratch/zijie/github/fiber/example.py", line 91, in init
+    local_rank, world_size = setup_model_parallel()
+  File "/scratch/zijie/github/fiber/example.py", line 30, in setup_model_parallel
+    torch.distributed.init_process_group("nccl")
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 895, in init_process_group
+    default_pg = _new_process_group_helper(
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 1009, in _new_process_group_helper
+    backend_class = ProcessGroupNCCL(backend_prefix_store, group_rank, group_size, pg_options)
+RuntimeError: ProcessGroupNCCL is only supported with GPUs, no GPUs found!
+10.24.38.3 - - [12/Apr/2023 14:43:31] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:43:31] "GET /static/styles/style.css HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:44:30] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:44:43] "GET / HTTP/1.1" 200 -
+10.24.38.3 - - [12/Apr/2023 14:44:43] "GET /static/styles/style.css HTTP/1.1" 200 -
+/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.elastic.agent.server.api:Received 2 death signal, shutting down workers
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 881548 closing signal SIGINT
+====>
+Traceback (most recent call last):
+  File "/opt/conda/envs/llama/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/llama/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/launch.py", line 196, in <module>
+    main()
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/launch.py", line 192, in main
+    launch(args)
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/launch.py", line 177, in launch
+    run(args)
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 241, in launch_agent
+    result = agent.run()
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/elastic/metrics/api.py", line 129, in wrapper
+    result = f(*args, **kwargs)
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/elastic/agent/server/api.py", line 723, in run
+    result = self._invoke_run(role)
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/elastic/agent/server/api.py", line 864, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/opt/conda/envs/llama/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 881480 got signal: 2
