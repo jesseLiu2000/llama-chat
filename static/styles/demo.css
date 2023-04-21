@@ -1,9 +1,8 @@
 :root {
   --body-bg: linear-gradient(135deg, rgb(255, 255,255) 0%, rgb(255, 255,255)100%);
-  --msger-bg: #fff;
-  /* --border: 2px solid rgb(44, 44, 48); */
-  --left-msg-bg:#9a9f9f;
-  --right-msg-bg: #9a9f9f;
+  --msger-bg: #ffffff;
+  --left-msg-bg: #eee;
+  --right-msg-bg: rgb(218,242,246);
 }
 
 html {
@@ -92,7 +91,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .msg-info-name {
   margin-right: 10px;
@@ -103,6 +102,7 @@ body {
 }
 
 .left-msg .msg-bubble {
+  color: rgb(0,0,0);
   border-bottom-left-radius: 0;
 }
 
@@ -110,8 +110,8 @@ body {
   flex-direction: row-reverse;
 }
 .right-msg .msg-bubble {
+  color: rgb(0,0,0);
   background: var(--right-msg-bg);
-  color: rgb(255, 255,255);
   border-bottom-right-radius: 0;
 }
 .right-msg .msg-img {
@@ -129,10 +129,11 @@ body {
   border: none;
   border-radius: 3px;
   font-size: 1em;
+  outline: none;
 }
 .msger-input {
   flex: 1;
-  background: rgb(255, 255,255);
+  background: rgb(255,255,255);
 }
 .msger-send-btn {
   margin-left: 10px;

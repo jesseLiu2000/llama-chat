@@ -1,0 +1,198 @@
+======== Flask Running =========
+ * Serving Flask app 'c_llama'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.24.77.19:8080
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 839-720-792
+10.24.38.3 - - [18/Apr/2023 21:00:06] "GET /demo HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:06] "[36mGET /static/styles/demo.css HTTP/1.1[0m" 304 -
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+
+llama_print_timings:        load time =  1656.66 ms
+llama_print_timings:      sample time =     1.19 ms /     2 runs   (    0.59 ms per run)
+llama_print_timings: prompt eval time =  3252.20 ms /    11 tokens (  295.65 ms per token)
+llama_print_timings:        eval time =   956.38 ms /     1 runs   (  956.38 ms per run)
+llama_print_timings:       total time =  4210.57 ms
+10.24.38.3 - - [18/Apr/2023 21:00:14] "GET /get?msg=answer%205+2 HTTP/1.1" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:31] "HEAD / HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:31] "GET / HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:31] "GET /static/styles/bootstrap.min.css HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:31] "GET /static/styles/style.css HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:31] "GET /static/styles/font-awesome.min.css HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:31] "GET /static/styles/base.css HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/logo.png HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/img/prompting.png HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "[33mGET /static/chatbot.png HTTP/1.0[0m" 404 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/img/cost.png HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/js/bootstrap.min.js HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/js/jquery-1.10.2.min.js HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/js/base.js HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:32] "GET /static/search/main.js HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:33] "[33mGET /search/worker.js HTTP/1.0[0m" 404 -
+10.24.77.19 - - [18/Apr/2023 21:00:33] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+10.24.77.19 - - [18/Apr/2023 21:00:36] "GET /demo HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:36] "GET /static/styles/demo.css HTTP/1.0" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:36] "GET /demo HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.24.38.3 - - [18/Apr/2023 21:00:40] "GET /demo HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:40] "GET /static/styles/demo.css HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+10.24.77.19 - - [18/Apr/2023 21:00:43] "GET /demo HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:43] "GET /static/styles/demo.css HTTP/1.0" 200 -
+10.24.77.19 - - [18/Apr/2023 21:00:44] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+10.24.38.3 - - [18/Apr/2023 21:00:46] "GET /demo HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:46] "GET /static/styles/demo.css HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:00:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+10.24.38.3 - - [18/Apr/2023 21:01:11] "GET /demo HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:01:12] "GET /static/styles/demo.css HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:01:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.24.38.3 - - [18/Apr/2023 21:01:25] "GET /demo HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:01:25] "GET /static/styles/demo.css HTTP/1.1" 200 -
+10.24.38.3 - - [18/Apr/2023 21:01:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+======== Flask Running =========
+ * Serving Flask app 'c_llama'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.24.77.19:8080
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+llama.cpp: loading model from /scratch/zijie/github/weights/65B/ggml-model-q4_0.bin
+llama_model_load_internal: format     = ggjt v1 (latest)
+llama_model_load_internal: n_vocab    = 32000
+llama_model_load_internal: n_ctx      = 512
+llama_model_load_internal: n_embd     = 8192
+llama_model_load_internal: n_mult     = 256
+llama_model_load_internal: n_head     = 64
+llama_model_load_internal: n_layer    = 80
+llama_model_load_internal: n_rot      = 128
+llama_model_load_internal: ftype      = 2 (mostly Q4_0)
+llama_model_load_internal: n_ff       = 22016
+llama_model_load_internal: n_parts    = 1
+llama_model_load_internal: model size = 65B
+llama_model_load_internal: ggml ctx size = 146.86 KB
+llama_model_load_internal: mem required  = 41477.67 MB (+ 5120.00 MB per state)
+llama_init_from_file: kv self size  = 1280.00 MB
+AVX = 1 | AVX2 = 1 | AVX512 = 0 | FMA = 1 | NEON = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | VSX = 0 | 
+ * Debugger is active!
+ * Debugger PIN: 839-720-792
